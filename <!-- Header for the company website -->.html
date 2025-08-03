@@ -1,109 +1,165 @@
-<!-- Header for the company website -->
-<header class="bg-white shadow-md">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- The company name -->
-        <h1 class="text-2xl font-bold text-gray-800">
-            JAMCO CONSULTING
-        </h1>
-        <!-- Navigation links for the site -->
-        <nav>
-            <ul class="flex space-x-4 items-center">
-                <!-- Dropdown for Services -->
-                <li class="relative">
-                    <button id="services-button" class="text-gray-600 hover:text-orange-600 font-medium flex items-center focus:outline-none">
-                        Services
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="services-dropdown" class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-10 hidden">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">Electrical Engineering</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">Civil Construction</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">Project Management</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">Consulting Services</a>
-                    </div>
-                </li>
-                <li><a href="#" class="text-gray-600 hover:text-orange-600 font-medium">Projects</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-orange-600 font-medium">About Us</a></li>
-                <!-- Dropdown for Contact -->
-                <li class="relative">
-                    <button id="contact-button" class="text-gray-600 hover:text-orange-600 font-medium flex items-center focus:outline-none">
-                        Contact
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="contact-dropdown" class="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden">
-                        <a href="mailto:contact@jamcoconsulting.com" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            Email Us
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<!DOCTYPE html>
+<!-- This declaration defines the document to be HTML5 -->
+<html lang="en">
+<!-- The <html> element is the root element of an HTML page -->
 
-<!-- Main content area -->
-<main>
-    <!-- This is a container to hold our content and center it on the page -->
-    <div class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg max-w-6xl">
+<head>
+    <!-- The <head> element contains meta-information about the HTML page -->
+    <meta charset="UTF-8">
+    <!-- This specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This makes the page responsive to different screen sizes, like mobile phones -->
+    
+    <title>JAMCO CONSULTING - Electrical & Civil Construction</title>
+    <!-- The <title> element specifies a title for the HTML page, which is shown in the browser's title bar or in the page's tab -->
 
-        <!-- Flex container to hold text content and the new image -->
-        <div class="flex flex-col md:flex-row md:space-x-12 items-center">
-            
-            <!-- Left side: Text content -->
-            <div class="md:w-2/3">
-                <!-- Main heading for the company -->
-                <h1 class="text-4xl font-bold text-orange-600 mb-4">
-                    Excellence in Electrical & Civil Construction
-                </h1>
+    <!-- This script adds Tailwind CSS, a utility-first CSS framework for styling your website quickly -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-                <!-- Introductory paragraph about the company -->
-                <p class="text-lg mb-4">
-                    JAMCO CONSULTING is a premier engineering firm based in Cagayan De Oro City, specializing in innovative and reliable solutions for both electrical and civil construction projects. Our commitment to quality and safety sets us apart.
-                </p>
+    <!-- This loads the 'Inter' font for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
-                <p class="text-lg mb-6">
-                    We partner with our clients to deliver projects on time, within budget, and to the highest standards of excellence.
-                </p>
-            </div>
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* NEW: Set the background image to an engineering blueprint */
+            background-image: url('https://images.unsplash.com/photo-1519671482727-ac9427c923e8?q=80&w=1935&auto=format&fit=crop');
+            background-size: cover; /* Make the image cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* The background image will not scroll with the page */
+            position: relative; /* Needed for the overlay */
+        }
 
-            <!-- Right side: Image of a construction worker -->
-            <div class="md:w-1/3 mt-8 md:mt-0">
-                <img src="https://placehold.co/400x500/e2e8f0/4a5568?text=JAMCO+Worker" 
-                     alt="A dedicated construction worker from JAMCO CONSULTING on site" 
-                     class="rounded-lg shadow-xl w-full h-auto object-cover">
+        /* NEW: Add a semi-transparent overlay to darken the background slightly, improving text readability */
+        body::before {
+            content: '';
+            position: fixed; /* Fixes the overlay to the viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            z-index: -1; /* Place the overlay behind the content */
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+    <!-- The <body> element defines the document's body, and is a container for all the visible contents -->
+
+    <!-- Header for the company website -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- The company name -->
+            <h1 class="text-2xl font-bold text-gray-800">
+                JAMCO CONSULTING
+            </h1>
+            <!-- Navigation links for the site -->
+            <nav>
+                <ul class="flex space-x-4 items-center">
+                    <!-- Dropdown for Services -->
+                    <li class="relative">
+                        <button id="services-button" class="text-gray-600 hover:text-orange-600 font-medium flex items-center focus:outline-none">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="services-dropdown" class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-10 hidden">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">Electrical Engineering</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">Civil Construction</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">Project Management</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">Consulting Services</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="text-gray-600 hover:text-orange-600 font-medium">Projects</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-orange-600 font-medium">About Us</a></li>
+                    <!-- Dropdown for Contact -->
+                    <li class="relative">
+                        <button id="contact-button" class="text-gray-600 hover:text-orange-600 font-medium flex items-center focus:outline-none">
+                            Contact
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="contact-dropdown" class="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden">
+                            <a href="mailto:contact@jamcoconsulting.com" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-600">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                Email Us
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- This is a container to hold our content and center it on the page -->
+        <div class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg max-w-6xl">
+
+            <!-- Flex container to hold text content and the new image -->
+            <div class="flex flex-col md:flex-row md:space-x-12 items-center">
+                
+                <!-- Left side: Text content -->
+                <div class="md:w-2/3">
+                    <!-- Main heading for the company -->
+                    <h1 class="text-4xl font-bold text-orange-600 mb-4">
+                        Excellence in Electrical & Civil Construction
+                    </h1>
+
+                    <!-- Introductory paragraph about the company -->
+                    <p class="text-lg mb-4">
+                        JAMCO CONSULTING is a premier engineering firm based in Cagayan De Oro City, specializing in innovative and reliable solutions for both electrical and civil construction projects. Our commitment to quality and safety sets us apart.
+                    </p>
+
+                    <p class="text-lg mb-6">
+                        We partner with our clients to deliver projects on time, within budget, and to the highest standards of excellence.
+                    </p>
+                </div>
+
+                <!-- Right side: Image of a construction worker -->
+                <div class="md:w-1/3 mt-8 md:mt-0">
+                    <img src="https://placehold.co/400x500/e2e8f0/4a5568?text=JAMCO+Worker" 
+                         alt="A dedicated construction worker from JAMCO CONSULTING on site" 
+                         class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+
             </div>
 
         </div>
+    </main>
 
-    </div>
-</main>
+    <!-- JavaScript to handle multiple dropdowns -->
+    <script>
+        // --- Reusable Dropdown Functionality ---
+        function setupDropdown(buttonId, dropdownId) {
+            const button = document.getElementById(buttonId);
+            const dropdown = document.getElementById(dropdownId);
 
-<!-- JavaScript to handle multiple dropdowns -->
-<script>
-    // --- Reusable Dropdown Functionality ---
-    function setupDropdown(buttonId, dropdownId) {
-        const button = document.getElementById(buttonId);
-        const dropdown = document.getElementById(dropdownId);
+            button.addEventListener('click', (event) => {
+                event.stopPropagation();
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    if (menu.id !== dropdownId) {
+                        menu.classList.add('hidden');
+                    }
+                });
+                dropdown.classList.toggle('hidden');
+            });
+        }
 
-        button.addEventListener('click', (event) => {
-            event.stopPropagation();
+        setupDropdown('services-button', 'services-dropdown');
+        setupDropdown('contact-button', 'contact-dropdown');
+
+        window.addEventListener('click', () => {
             document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                if (menu.id !== dropdownId) {
+                if (!menu.classList.contains('hidden')) {
                     menu.classList.add('hidden');
                 }
             });
-            dropdown.classList.toggle('hidden');
         });
-    }
+    </script>
 
-    setupDropdown('services-button', 'services-dropdown');
-    setupDropdown('contact-button', 'contact-dropdown');
+</body>
 
-    window.addEventListener('click', () => {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            if (!menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-            }
-        });
-    });
-</script>
+</html>
